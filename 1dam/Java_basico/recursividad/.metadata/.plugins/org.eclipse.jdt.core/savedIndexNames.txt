@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\pablo\Desktop\Insti\Programación\Segunda evaluación\Codigos java\recursividad\.metadata\.plugins\org.eclipse.jdt.core
+3547523344.index
+1865797976.index
+1138668838.index
+886670768.index
+1772728169.index
+3719962757.index

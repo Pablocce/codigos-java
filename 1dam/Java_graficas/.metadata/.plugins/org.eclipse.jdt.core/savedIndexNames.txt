@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\pablo\Desktop\insti\Programación\Tercera evaluación\Graficas\.metadata\.plugins\org.eclipse.jdt.core
+3324129003.index
+1197306254.index
+706817146.index
+1865797976.index
+83959460.index
+553415476.index

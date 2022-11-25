@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\pablo\Desktop\Insti\Programación\Segunda evaluación\Codigos java\paquetes\.metadata\.plugins\org.eclipse.jdt.core
+2434679868.index
+1865797976.index
+3324129003.index

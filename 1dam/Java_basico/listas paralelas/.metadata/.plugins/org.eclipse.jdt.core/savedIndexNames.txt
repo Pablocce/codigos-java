@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\pablo\Desktop\insti\Programación\Segunda evaluación\Codigos java\listas paralelas\.metadata\.plugins\org.eclipse.jdt.core
+3783280618.index
+2022250064.index
+3605698059.index
+3324129003.index

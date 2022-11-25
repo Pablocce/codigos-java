@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\pablo\Desktop\Insti\Programación\Segunda evaluación\Codigos java\Arrays\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1680001904.index
+4247493322.index
+321256422.index

@@ -1,0 +1,38 @@
+package Ejemplo2;
+
+public class Producto {
+		private String nombre;
+		private int cantidad;
+		
+		public Producto(String nom, int cant) {
+			this.nombre = nom;
+			this.cantidad = cant;
+		}
+		
+		public Producto() {
+			this.nombre = null;
+			this.cantidad = 0;
+		}
+		
+		public String getNombre() {
+			return nombre;
+			
+		}
+		
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		
+		public int getCantidad() {
+			return cantidad;
+		}
+		public void setCantidad(int cantidad) {
+			this.cantidad(); 
+		}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		}
+
+}
