@@ -1,0 +1,9 @@
+
+
+
+public class proceso {
+	String ruta = "\"C:\\Riot Games\\Riot Client\\RiotClientServices.exe\"";
+	ProcessBuilder pb = new ProcessBuilder(ruta);
+	Process process = pb.start();
+	
+}

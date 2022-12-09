@@ -1,0 +1,30 @@
+
+import java.util.Random;
+
+public class corredor extends Thread{
+	private String nombre;
+
+	public corredor(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void run() {
+		
+		Ramdom r = new Random();
+		
+		for (int i = 0; i< 2000; i++) {
+			try {
+				Thread.sleep(r.nextInt(5));
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("El corredor "+ nombre + " acabó la carrera");
+	}
+	
+	
+	
+	
+}

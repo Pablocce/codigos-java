@@ -1,0 +1,10 @@
+import java.io.IOException;
+
+public class proceso {
+	public static void main(String args[]) throws IOException {
+		String ruta = "\"C:\\Riot Games\\Riot Client\\RiotClientServices.exe\"";
+		ProcessBuilder pb = new ProcessBuilder(ruta);
+		Process process = pb.start();
+		System.out.println(process.pid());
+	}
+}

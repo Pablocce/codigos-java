@@ -1,0 +1,20 @@
+package hilos1;
+
+public class Saludo extends Thread{
+
+	int cont = 0;
+	
+	public Saludo(int cont) {
+		this.cont = cont;
+	}
+
+	public void run() {
+		System.out.println("--- Arranca el hilo número: " + cont);
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Hilo número: " + cont + " se ejecuta la vez " + (i+1));
+		}
+		System.out.println("Hilo " + cont +" se detiene");
+	}
+
+}

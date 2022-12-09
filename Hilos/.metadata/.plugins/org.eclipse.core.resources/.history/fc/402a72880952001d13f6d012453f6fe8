@@ -1,0 +1,8 @@
+
+
+
+public class proceso {
+	String ruta;
+	ruta = "";
+
+}
