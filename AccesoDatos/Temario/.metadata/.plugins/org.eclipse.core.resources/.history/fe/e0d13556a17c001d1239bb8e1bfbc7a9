@@ -1,0 +1,16 @@
+package clases;
+
+import javax.persistence.*;
+import org.hibernate.*;
+import clases.Country;
+import util.HibernateUtil;
+
+
+public class InsertarPais {
+
+	public static void main(String[] args) {
+		SessionFactory sf = new HibernateUtil.getSessionFactory();
+
+	}
+
+}

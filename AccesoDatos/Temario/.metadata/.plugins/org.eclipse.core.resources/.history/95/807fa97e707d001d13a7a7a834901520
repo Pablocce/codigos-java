@@ -1,0 +1,52 @@
+package clases;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.*;
+
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+
+public class ModificarPais {
+
+	public static void consultaPais() {
+		try(Session s = HibernateUtil.getSessionFactory().openSession()){
+			System.out.println("Si");
+			String consulta = "from City where name = 'Beograd'";
+			City city;
+			Query qAntes = s.createQuery(consulta);
+			city = (City) qAntes.uniqueResult();
+			System.out.println("aaaa");
+			System.out.printf("id: %s - Name: %10s - Distrito: %10s - Code: %4s",city.getId(),city.getName(),city.getDistrict(),city.getCountry());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println("aa");
+		consultaPais();
+		try(Session s = HibernateUtil.getSessionFactory().openSession()){
+			Transaction tx = s.beginTransaction();
+			String sentencia;
+			System.out.println("a");
+			sentencia = "update City set CountryCode = :CountryCode where name = :name";
+			Query q = s.createQuery(sentencia);
+			q.setParameter("CountryCode", "SRB");
+			q.setParameter("name", "Beograd");
+			int numFilasModificadas = q.executeUpdate();
+			tx.commit();
+			System.out.println("Filas modificadas: "+numFilasModificadas);
+			consultaPais();
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

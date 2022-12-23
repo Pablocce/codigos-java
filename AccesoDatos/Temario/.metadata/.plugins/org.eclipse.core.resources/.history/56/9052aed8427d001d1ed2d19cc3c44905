@@ -1,0 +1,48 @@
+package clases;
+
+import org.hibernate.*;
+import util.HibernateUtil;
+import java.util.Set;
+public class ListadoLanguageConGet {
+
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		System.out.println("=============================================================================================================");
+		System.out.printf("Datos del país %4s%n",args[0]);
+		
+		
+		Country country = new Country();
+		try {
+			String code = args[0];
+			country = (Country) s.load(Country.class, (String) code);
+			System.out.println("Nombre del país: " + country.getName());
+			
+			System.out.println("=============================================================================================================");
+			
+			System.out.printf("CIUDADES DEL PAIS %s%n",args[0]);
+			Set<City> listaciudades = country.getCities();
+			System.out.printf("Ciudades del país: %d %n", listaciudades.size());
+			
+			for(City ciudades : listaciudades) {
+				System.out.printf("ID: %d - Nombre: %12s - Poblacion: %10d - Distrito: %8s %n",ciudades.getId(),ciudades.getName(), ciudades.getPopulation(), ciudades.getDistrict());
+			}
+			
+			
+			
+			
+			
+			System.out.println("=============================================================================================================");
+			
+		}catch(ObjectNotFoundException e){
+			System.out.printf("No existe el país: %s%n", args[0]);
+			System.out.println("=============================================================================================================");
+		}finally {
+			s.close();
+		}
+
+	}
+
+	}
+
+}

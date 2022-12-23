@@ -1,0 +1,59 @@
+Ciclo: 
+	Nombre Desarrollo de aplicaciones multiplataforma
+	Abreviatura: DAM
+	Fecha_BOE: 20 de mayo de 2010
+	Cursos: 2
+	Horas: 2000
+	Curso: 
+		Nombre: Primero
+		Horas: 1000
+		Modulo: 
+			Nombre: Bases de datos
+			Horas: 205
+		Modulo: 
+			Nombre: Entornos de desarrollo
+			Horas: 90
+		Modulo: 
+			Nombre: Formacion y orientacion laboral
+			Horas: 90
+		Modulo: 
+			Nombre: Lenguajes de marcas y sistemas de gestion de informacion
+			Horas: 140
+		Modulo: 
+			Nombre: Programacion
+			Horas: 270
+		Modulo: 
+			Nombre: Sistemas informaticos
+			Horas: 205
+	Cursos: 
+		Nombre: Segundo
+		Horas: 1000
+		Modulo: 
+			Nombre: Acceso a datos
+			Horas: 120
+		Modulo: 
+			Nombre: Desarrollo de interfaces
+			Horas: 120
+		Modulo: 
+			Nombre: Empresa e iniciativa emprendedora
+			Horas: 65
+		Modulo: 
+			Nombre: Ingles tecnico para grado superior
+			Horas: 40
+		Modulo: 
+			Nombre: Programacion de Servicios y Procesos
+			Horas: 80
+		Modulo: 
+			Nombre: Programacion multimedia y dispositivos moviles
+			Horas: 80
+		Modulo: 
+			Nombre: Sistemas de Gestion Empresarial
+			Horas: 95
+		Modulo: 
+			Nombre: Proyecto de desarrollo de aplicaciones multiplataforma
+			Horas: 30
+		Modulo: 
+			Nombre: Formacion en Centros de Trabajo
+			Horas: 370
+
+

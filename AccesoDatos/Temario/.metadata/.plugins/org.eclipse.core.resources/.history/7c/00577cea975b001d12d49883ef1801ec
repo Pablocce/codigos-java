@@ -1,0 +1,25 @@
+package Marshalling;
+
+import java.io.*;
+
+public class EscribirFichDepartamento {
+
+	public static void main(String[] args) {
+		Persona persona;
+		File fichero = new File("FichDepartamentos.dat");
+		FileOutputStream fileout = new FileOutputStream(fichero);
+		ObjectOutputStream dataOS = new ObjectOutputStream(fileout);
+		
+		String nombres[] = {"d001", "d002" , "d003", "d004", "d005", "d006", "d007", "d008", "d009"};
+		int edades[] = {14,15,13,15,16,12,16,14,13};
+		
+		for (int i = 0; i<edades.length; i++) {
+			persona = new Persona(nombres[i], edades[i]);
+			dataOS.writeObject(persona);
+		}
+		
+		dataOS.close();
+
+	}
+
+}

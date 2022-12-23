@@ -1,0 +1,24 @@
+A)  Escribe tu nombre y apellidos
+Pablo Calvo Espinar
+B)  Escribe la fecha de hoy
+28/11/2022
+1.  Para que un recurso se pueda usar en un try con recursos debe implementar al menos una de dos interfaces. ¿Cómo se llaman estas interfaces?
+IOException
+2.  ¿De qué otra manera se puede nombrar el desfase objeto-relacional?
+impedancia objeto-relacional
+3.  De los analizadores sintácticos más usados para XML, ¿cuál de ellos no carga todo el fichero en memoria?
+SAX
+4.  ¿Cómo se llama el conector de Java a BBDD relacionales?
+mysql connector java
+5.  ¿Qué interfaz deben implementar en Java los objetos serializables?
+Serializable
+6.  En JDBC ¿con qué método designamos el tipo de un parámetro de salida o entrada-salida o el valor devuelto por una función?
+Con el metodo get + tipo de variable
+7.  ¿Cómo se llama la API de marshalling a XML para Java que da más libertad para nombrar los métodos de las clases?
+JAXB
+8.  En un ResultSet de acceso aleatorio ¿con qué función puede acceder al registro anterior?
+previous
+9.  ¿Qué formato deben tener las plantillas que permiten a Java tranformar un fichero XML en un fichero de texto plano
+No lo se
+10. Nombra la interfaz y el método de ella que nos permite obtener la información de todas las columnas del diccionario de datos
+No lo se

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/byte-buddy-1.12.9.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/FastInfoset-1.2.15.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/hibernate-commons-annotations-5.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/hibernate-core-5.6.12.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/istack-commons-runtime-3.0.7.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/jandex-2.4.2.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/jaxb-runtime-2.3.1.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/jboss-logging-3.4.3.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/stax-ex-1.8.jar"/>
+	<classpathentry kind="lib" path="F:/Acceso a datos/Temario/librerias_hibernate/txw2-2.3.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

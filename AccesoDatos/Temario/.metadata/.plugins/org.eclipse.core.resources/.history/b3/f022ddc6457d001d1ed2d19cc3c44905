@@ -1,0 +1,44 @@
+package clases;
+
+import org.hibernate.*;
+import util.HibernateUtil;
+import java.util.Set;
+public class ListadoLanguageConGet {
+
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		System.out.println("=============================================================================================================");
+		System.out.printf("Datos del país %4s%n",args[0]);
+		
+		
+		Country country = new Country();
+		String codigoPais = args[0];
+		country = (Country) s.get(Country.class, codigoPais);
+		
+		
+		
+		if(country != null) {
+			System.out.println("Nombre del país: " + country.getName());
+			System.out.println("=============================================================================================================");
+			System.out.printf("IDIOMAS DEL PAIS %s%n",args[0]);
+			Set<Countrylanguage> listalenguajes = country.getCountrylanguages();
+			
+			System.out.printf("Número de idiomas: %d %n", listalenguajes.size());
+			
+			for(Countrylanguage ciudades : listalenguajes) {
+				
+			}
+			System.out.println("=============================================================================================================");
+			}
+		else {
+			System.out.printf("NO EXISTE EL PAIS %s%n", args[0]);
+			System.out.println("=============================================================================================================");
+		}
+		
+
+	}
+
+}
+
+

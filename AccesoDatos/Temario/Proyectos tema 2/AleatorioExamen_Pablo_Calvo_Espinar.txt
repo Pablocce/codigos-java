@@ -1,0 +1,15 @@
+0484       205                                              Bases de datos
+0483       205                                       Sistemas informaticos
+0487        90                                      Entornos de desarrollo
+0493        90                             Formacion y orientacion laboral
+0373       140    Lenguajes de marcas y sistemas de gestion de informacion
+0485       270                                                Programacion
+0486       120                                              Acceso a datos
+0488       120                                    Desarrollo de interfaces
+0494        65                           Empresa e iniciativa emprendedora
+0180        40                          Ingles tecnico para grado superior
+0490        80                        Programacion de Servicios y Procesos
+0489        80              Programacion multimedia y dispositivos moviles
+0491        95                             Sistemas de Gestion Empresarial
+0492        30      Proyecto de desarrollo de aplicaciones multiplataforma
+0495       370                             Formacion en Centros de Trabajo

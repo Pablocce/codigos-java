@@ -1,0 +1,31 @@
+package ejercicio8;
+
+import java.sql.*;
+import ejercicio1.Conector_JDBC_mejorado;
+
+public class JDBC_pelicula_disponible {
+
+	public static void main(String[] args) {
+		
+		try(Connection con = Conector_JDBC_mejorado.Conexion("sakila", "localhost", "3306", "root", "Curso2023")){
+			Conector_JDBC_mejorado.muestraConexionOK("sakila", "localhost", "3306", "root", "Curso2023");
+			
+			CallableStatement cstmt = con.prepareCall("{ call film_in_stock(?,?,?)}");
+			
+			String identificadorPelicula = args[0];
+			String identificadorAlmacen = args[1];
+			
+			cstmt.setString(1, identificadorPelicula);
+			cstmt.setString(2,identificadorAlmacen);
+			cstmt.registerOutParameter(3,Types.BIGINT);
+		
+			
+			cstmt.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

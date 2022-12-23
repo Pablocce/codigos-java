@@ -1,0 +1,47 @@
+package clases;
+
+import javax.persistence.*;
+import org.hibernate.*;
+import util.HibernateUtil;
+import java.math.BigDecimal;
+
+
+public class InsertarPais {
+
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory(); 
+		Session s = sf.openSession();
+		Transaction tx = null;
+		
+		try {
+			tx = s.beginTransaction();
+			Country country = new Country();
+			country.setCode("SRB");
+			country.setName("Serbia");
+			country.setContinent("Europe");
+			country.setRegion("Southern Europe");
+			country.setSurfaceArea(BigDecimal.valueOf(88361.0));
+			country.setPopulation(6926705);
+			country.setLocalName("Srbija");
+			country.setGovernmentForm("Republic");
+			country.setCode2("RS");
+			try {
+				s.save(country);
+				tx.commit();
+			}catch(PersistenceException e) {
+				tx.rollback();
+				System.out.println("PersistenceException: " + e.getMessage());
+				e.printStackTrace();
+			}
+			
+		}catch(Exception e) {
+			System.out.println("Excepción no controlada: "+e.getMessage());
+			e.printStackTrace();
+		}finally {
+			s.disconnect();
+			s.close();
+		}
+
+	}
+
+}

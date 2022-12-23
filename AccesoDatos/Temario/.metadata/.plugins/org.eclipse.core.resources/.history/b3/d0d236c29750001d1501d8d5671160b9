@@ -1,0 +1,24 @@
+package jdbc_connection;
+
+import java.sql.*;
+import jdbc_connection.Conector_JDBC;
+
+public class JDBC_create_table {
+
+	public static void main(String[] args) {
+		try(Connection con = Conector_JDBC.Conexion("employees", "localhost", "3306", "root", "Pabloyrodrigo1972")) {
+			Statement smtmt = con.createStatement();
+			String sentencia = null;
+			sentencia +="create table ELIMINAME (              \n";
+			sentencia +="   DNI         char(9) not null,      \n";
+			sentencia +="   APELLIDOS   varchar(32) not null,  \n";
+			sentencia +="   CP           char(5),              \n";
+			sentencia +="   DNI         char(9) not null,      \n";
+			sentencia +="   PRIMARY KEY (DNI)           )";
+		} catch{
+			
+		}
+
+	}
+
+}

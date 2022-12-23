@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15 dic 2022 13:04:52 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="prueba" name="clases.Empleados" optimistic-lock="none" table="empleados">
+        <id name="dni" type="string">
+            <column length="9" name="DNI"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="clases.Departamentos" fetch="select" name="departamentos">
+            <column name="NumDept"/>
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column length="20" name="Nombre"/>
+        </property>
+        <property name="ap1" type="string">
+            <column length="20" name="Ap1"/>
+        </property>
+        <property name="ap2" type="string">
+            <column length="20" name="Ap2"/>
+        </property>
+    </class>
+</hibernate-mapping>

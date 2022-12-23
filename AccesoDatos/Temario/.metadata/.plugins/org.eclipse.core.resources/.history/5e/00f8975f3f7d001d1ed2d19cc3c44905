@@ -1,0 +1,31 @@
+package clases;
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+public class ListadoCityConLoad {
+
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		System.out.println("======================================================");
+		System.out.printf("Datos del país %4s%n",args[0]);
+		
+		Country country = new Country();
+		try {
+			System.out.println("====================================================");
+			System.out.printf("CIUDADES DEL PAIS %s%n",args[0]);
+			String code = args[0];
+			country = (Country) s.load(Country.class, (String) code);
+			System.out.println("====================================================");
+			
+		}catch(ObjectNotFoundException e){
+			System.out.printf("No existe el país: %s%n", args[0]);
+			System.out.println("=====================================================");
+		}finally {
+			s.close();
+		}
+
+	}
+
+}

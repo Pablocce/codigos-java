@@ -1,0 +1,19 @@
+package ejercicio8;
+
+import java.sql.*;
+import ejercicio1.Conector_JDBC_mejorado;
+
+public class JDBC_pelicula_disponible {
+
+	public static void main(String[] args) {
+		
+		try(Connection con = Conector_JDBC_mejorado.Conexion("sakila", "localhost", "3306", "root", "Curso2023")){
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package clases;
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+
+public class ModificarPais {
+
+	
+	public static void main(String[] args) {
+		try(Session s = HibernateUtil.getSessionFactory().openSession()){
+			Transaction tx = s.beginTransaction();
+			String sentencia;
+			sentencia = "update City set CountryCode = :CountryCode where name = :name";
+			Query q = s.createQuery(sentencia);
+			q.setParameter("CountryCode", "SRB");
+			q.setParameter("name", "Beograd");
+			
+			
+		}
+
+	}
+
+}

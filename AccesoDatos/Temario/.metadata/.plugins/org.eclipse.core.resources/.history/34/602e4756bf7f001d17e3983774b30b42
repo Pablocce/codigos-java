@@ -1,0 +1,47 @@
+package clases;
+
+
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+
+public class ModificarPais {
+
+	@SuppressWarnings("deprecation")
+	public static void consultaPais() {
+		try(Session s = HibernateUtil.getSessionFactory().openSession()){
+			String consulta = "from City where name = 'Beograd'";
+			City city;
+			@SuppressWarnings("rawtypes")
+			Query qAntes = s.createQuery(consulta);
+			city = (City) qAntes.uniqueResult();
+			System.out.printf("id: %s - Name: %10s - Distrito: %10s - Code: %4s %n",city.getId(),city.getName(),city.getDistrict(),city.getCountry().getCode());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		Transaction tx = s.beginTransaction();
+		consultaPais();
+		
+	
+		CountrylanguageId idiomaID = new CountrylanguageId();
+		
+		idiomaID = (CountrylanguageId) s.load(CountrylanguageId.class, "YUG"  );
+		System.out.println("SII");
+		
+		try{
+			idiomaID.setCountryCode("SRB");
+			s.update(idiomaID);
+			tx.commit();
+			consultaPais();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

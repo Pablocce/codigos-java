@@ -1,0 +1,15 @@
+package clases;
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+public class ListadoCityConLoad {
+
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		System.out.println("======================================================0");
+
+	}
+
+}

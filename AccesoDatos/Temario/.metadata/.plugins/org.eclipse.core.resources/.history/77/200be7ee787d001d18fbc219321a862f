@@ -1,0 +1,49 @@
+package clases;
+
+
+
+import org.hibernate.*;
+import util.HibernateUtil;
+
+
+public class ModificarPais {
+
+	@SuppressWarnings("deprecation")
+	public static void consultaPais() {
+		try(Session s = HibernateUtil.getSessionFactory().openSession()){
+			String consulta = "from City where name = 'Beograd'";
+			City city;
+			@SuppressWarnings("rawtypes")
+			Query qAntes = s.createQuery(consulta);
+			city = (City) qAntes.uniqueResult();
+			System.out.printf("id: %s - Name: %10s - Distrito: %10s - Code: %4s %n",city.getId(),city.getName(),city.getDistrict(),city.getCountry());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		Transaction tx = s.beginTransaction();
+		consultaPais();
+		
+		City city = new City();
+		String Codigo = "SRB";
+		city = (City) s.load(City.class, (String)"Beograd");
+		try{
+			s.update(city);
+			
+			
+			int numFilasModificadas = q.executeUpdate();
+			tx.commit();
+			System.out.println("Filas modificadas: "+numFilasModificadas);
+			consultaPais();
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
