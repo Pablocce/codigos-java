@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LinearLayout</string>
+    <string name="to" />
+    <string name="subject" />
+    <string name="message" />
+    <string name="send" />
+</resources>
